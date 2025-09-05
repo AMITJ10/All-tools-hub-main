@@ -1,0 +1,23 @@
+{
+  "name": "OneCalc \u2014 All-in-One Calculator",
+  "short_name": "OneCalc",
+  "description": "EMI, SIP, GST, Scientific, Unit & Currency \u2014 installable PWA.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1877f2",
+  "form_factor": "wide",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
