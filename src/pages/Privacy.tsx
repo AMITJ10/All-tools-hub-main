@@ -24,7 +24,7 @@ const Privacy = () => {
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold text-foreground">Privacy Policy</h1>
             <p className="text-xl text-muted-foreground">
-              Your privacy is important to us. This policy explains how OneCalc handles your data.
+              Your privacy is important to us. This policy explains how Calculator-ai handles your data.
             </p>
             <p className="text-sm text-muted-foreground">
               Last updated: september 1, 2025
@@ -70,7 +70,7 @@ const Privacy = () => {
               <CardContent>
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                   <li>To provide and improve our calculator services</li>
-                  <li>To personalize your experience on OneCalc</li>
+                  <li>To personalize your experience on OCalculator-aineCalc</li>
                   <li>To send newsletters and updates (with your consent)</li>
                   <li>To analyze usage patterns and optimize performance</li>
                   <li>To display relevant advertisements through Google AdSense</li>
