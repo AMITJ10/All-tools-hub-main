@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>calculator — Convert, Compute, Plan | Free Online Tools</title>
+    <meta name="description" content="Free all-in-one calculator with currency converter, loan EMI calculator, BMI calculator, unit conversions, tip calculator & more. Fast, accurate, mobile-friendly tools." />
+    <meta name="keywords" content="calculator, currency converter, loan calculator, BMI calculator, tip calculator, unit converter, percentage calculator, online tools" />
+    <meta name="author" content="All-Tools-Hub" />
+    <link rel="canonical" href="https://all-tools-hub.com/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="All-In-One Calculator — Convert, Compute, Plan" />
+    <meta property="og:description" content="Free calculator hub with currency converter, loan EMI, BMI, unit conversions & more. Lightning-fast, mobile-optimized tools." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://all-tools-hub.com/" />
+    <meta property="og:site_name" content="All-Tools-Hub" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="All-In-One Calculator — Convert, Compute, Plan" />
+    <meta name="twitter:description" content="Free calculator hub with currency converter, loan EMI, BMI, unit conversions & more." />
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="All-Tools-Hub" />
+
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.frankfurter.app" />
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
+    
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+      
+      // AdSense auto ads (optional)
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-YOUR_PUBLISHER_ID",
+        enable_page_level_ads: true
+      });
+    </script>
+    <link rel="manifest" href="/manifest.webmanifest">
+</head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  
+        <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/service-worker.js').catch(console.error);
+            });
+          }
+        </script>
+        
+</body>
+</html>
