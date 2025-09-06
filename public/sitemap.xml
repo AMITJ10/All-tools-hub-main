@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://onecalc.app/</loc></url>
-  <url><loc>https://onecalc.app/emi</loc></url>
-  <url><loc>https://onecalc.app/sip</loc></url>
-  <url><loc>https://onecalc.app/gst</loc></url>
-  <url><loc>https://onecalc.app/unit</loc></url>
-  <url><loc>https://onecalc.app/currency</loc></url>
+  <url>
+    <loc>https://calculatorapps.net/</loc>
+  </url>
+  <url>
+    <loc>https://calculatorapps.net/emi</loc>
+  </url>
+  <url>
+    <loc>https://calculatorapps.net/sip</loc>
+  </url>
+  <url>
+    <loc>https://calculatorapps.net/gst</loc>
+  </url>
+  <url>
+    <loc>https://calculatorapps.net/unit</loc>
+  </url>
+  <url>
+    <loc>https://calculatorapps.net/currency</loc>
+  </url>
 </urlset>
