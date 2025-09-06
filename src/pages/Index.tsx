@@ -391,5 +391,9 @@ const Index = () => {
     </div>
   );
 };
+<footer className="text-center py-6 text-sm text-muted-foreground">
+  © {new Date().getFullYear()} CalculatorApps.net — Built by Amit Jadhav to provide
+  free online calculators for finance, health, and daily use.
+</footer>
 
 export default Index;
