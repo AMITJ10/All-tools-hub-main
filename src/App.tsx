@@ -9,6 +9,15 @@ import Terms from "./pages/Terms";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
+// ✅ Import calculator pages
+import BasicPage from "./pages/BasicPage";
+import PercentageTipPage from "./pages/PercentageTipPage";
+import CurrencyConverterPage from "./pages/CurrencyConverterPage";
+import LoanEmiPage from "./pages/LoanEmiPage";
+import BmiPage from "./pages/BmiPage";
+import UnitConverterPage from "./pages/UnitConverterPage";
+import SipCalculatorPage from "./pages/SipCalculatorPage";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -22,7 +31,17 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
+          {/* ✅ New calculator routes */}
+          <Route path="/basic" element={<BasicPage />} />
+          <Route path="/percentage-tip" element={<PercentageTipPage />} />
+          <Route path="/currency-converter" element={<CurrencyConverterPage />} />
+          <Route path="/loan-emi-calculator" element={<LoanEmiPage />} />
+          <Route path="/bmi-calculator" element={<BmiPage />} />
+          <Route path="/unit-converter" element={<UnitConverterPage />} />
+          <Route path="/sip-calculator" element={<SipCalculatorPage />} />
+
+          {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
