@@ -363,8 +363,8 @@ const Index = () => {
             © 2025 Calculator App. Free online calculators and converters for everyday use.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm">
-            <a href="/privacy" className="text-muted-foreground hover:text-foreground">Privacy</a>
-            <a href="/terms" className="text-muted-foreground hover:text-foreground">Terms</a>
+            <Link to="/privacy" className="text-muted-foreground hover:text-foreground">Privacy</Link>
+            <Link to="/terms" className="text-muted-foreground hover:text-foreground">Terms</Link>
             <a href="/contact" className="text-muted-foreground hover:text-foreground">Contact</a>
           </div>
         </div>
