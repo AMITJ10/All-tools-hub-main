@@ -24,7 +24,7 @@ const Terms = () => {
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold text-foreground">Terms of Service</h1>
             <p className="text-xl text-muted-foreground">
-              Please read these terms carefully before using calculator-ai services.
+              Please read these terms carefully before using calculator services.
             </p>
             <p className="text-sm text-muted-foreground">
               Last updated: September 1, 2025
@@ -41,7 +41,7 @@ const Terms = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  By accessing and using calculator-ai ("the Service"), you accept and agree to be bound by these Terms of Service. 
+                  By accessing and using calculator ("the Service"), you accept and agree to be bound by these Terms of Service. 
                   If you do not agree to these terms, please do not use our services. These terms apply to all visitors, 
                   users, and others who access or use the Service.
                 </p>
@@ -57,7 +57,7 @@ const Terms = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Calculator-ai provides free online calculators and financial tools including:
+                  Calculator provides free online calculators and financial tools including:
                 </p>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                   <li>Basic arithmetic calculator</li>
@@ -104,7 +104,7 @@ const Terms = () => {
                 <div>
                   <h3 className="font-semibold mb-2">No Financial Advice</h3>
                   <p className="text-muted-foreground">
-                    Calculator-ai provides calculation tools only. Results should not be considered as financial, investment, 
+                    Calculator provides calculation tools only. Results should not be considered as financial, investment, 
                     or professional advice. Always consult qualified professionals for financial decisions.
                   </p>
                 </div>
@@ -136,14 +136,14 @@ const Terms = () => {
                 <div>
                   <h3 className="font-semibold mb-2">Our Rights</h3>
                   <p className="text-muted-foreground">
-                    The Calculator-ai service, including design, text, graphics, and software, is owned by us and 
+                    The Calculator service, including design, text, graphics, and software, is owned by us and 
                     protected by copyright and other intellectual property laws.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Your License</h3>
                   <p className="text-muted-foreground">
-                    We grant you a limited, non-exclusive, non-transferable license to use Calculator-ai for personal, 
+                    We grant you a limited, non-exclusive, non-transferable license to use Calculator for personal, 
                     non-commercial purposes in accordance with these terms.
                   </p>
                 </div>
@@ -169,7 +169,7 @@ const Terms = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Calculator-ai displays advertisements through Google AdSense and may contain affiliate links. 
+                  Calculator displays advertisements through Google AdSense and may contain affiliate links. 
                   We are not responsible for the content of third-party advertisements or the products/services 
                   they promote.
                 </p>
@@ -182,7 +182,7 @@ const Terms = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Calculator-ai shall not be liable for any direct, indirect, incidental, special, or consequential damages 
+                  Calculator shall not be liable for any direct, indirect, incidental, special, or consequential damages 
                   resulting from the use or inability to use our service. This includes but is not limited to damages 
                   for loss of profits, data, or other intangible losses.
                 </p>
@@ -196,7 +196,7 @@ const Terms = () => {
               <CardContent>
                 <p className="text-muted-foreground">
                   We reserve the right to modify these terms at any time. Changes will be effective immediately 
-                  upon posting. Your continued use of Calculator-ai after changes constitutes acceptance of the new terms.
+                  upon posting. Your continued use of Calculator-OneCalc after changes constitutes acceptance of the new terms.
                 </p>
               </CardContent>
             </Card>
