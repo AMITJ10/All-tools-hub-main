@@ -1,3 +1,5 @@
+// src/App.tsx
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,6 +9,7 @@ import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Contact from "./pages/Contact";
+import About from "./pages/About"; // ✅ Import About page
 import NotFound from "./pages/NotFound";
 
 // ✅ Import calculator pages
@@ -31,6 +34,7 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} /> {/* ✅ Add About page route */}
 
           {/* ✅ New calculator routes */}
           <Route path="/basic" element={<BasicPage />} />
