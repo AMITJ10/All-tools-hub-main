@@ -1,3 +1,5 @@
+// src/pages/Index.tsx
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -105,7 +107,6 @@ const Index = () => {
       calc.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Handle hash navigation
   useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (hash && calculators.find((calc) => calc.id === hash)) {
@@ -116,8 +117,6 @@ const Index = () => {
   const handleTabChange = (value: string) => {
     setActiveTab(value);
     window.history.replaceState(null, "", `#${value}`);
-
-    // Auto-scroll to calculator section
     setTimeout(() => {
       const calculatorSection = document.querySelector(
         "[data-calculator-section]"
@@ -133,19 +132,15 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
       <Navigation searchQuery={searchQuery} onSearchChange={setSearchQuery} />
 
-      {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        {/* Animated background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background-secondary to-background"></div>
           <div className="absolute top-20 left-20 w-72 h-72 bg-primary/5 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
           <div className="absolute top-40 right-20 w-72 h-72 bg-accent-health/5 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
           <div className="absolute -bottom-8 left-40 w-72 h-72 bg-accent-currency/5 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
         </div>
-
         <div className="absolute inset-0 opacity-[0.03]">
           <img
             src={heroImage}
@@ -153,7 +148,6 @@ const Index = () => {
             className="w-full h-full object-cover"
           />
         </div>
-
         <div className="relative container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="text-center lg:text-left space-y-8">
@@ -180,7 +174,6 @@ const Index = () => {
                 more — all optimized for mobile and desktop with lightning-fast
                 performance.
               </p>
-
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                 <Button
                   onClick={() => handleTabChange("basic")}
@@ -200,8 +193,6 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-
-            {/* Feature Grid */}
             <div className="grid grid-cols-2 gap-4">
               <Card
                 className="p-6 border-card-border bg-card/90 backdrop-blur-sm hover:bg-card/95 transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-[1.02] group"
@@ -219,7 +210,6 @@ const Index = () => {
                   </p>
                 </div>
               </Card>
-
               <Card
                 className="p-6 border-card-border bg-card/90 backdrop-blur-sm hover:bg-card/95 transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-[1.02] group"
                 onClick={() => handleTabChange("currency")}
@@ -236,7 +226,6 @@ const Index = () => {
                   </p>
                 </div>
               </Card>
-
               <Card
                 className="p-6 border-card-border bg-card/90 backdrop-blur-sm hover:bg-card/95 transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-[1.02] group"
                 onClick={() => handleTabChange("health")}
@@ -253,7 +242,6 @@ const Index = () => {
                   </p>
                 </div>
               </Card>
-
               <Card
                 className="p-6 border-card-border bg-card/90 backdrop-blur-sm hover:bg-card/95 transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-[1.02] group"
                 onClick={() => handleTabChange("units")}
@@ -275,18 +263,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Top Banner Ad */}
       <div className="container mx-auto px-4 max-w-7xl">
         <AdBanner className="mb-6" />
       </div>
 
-      {/* Main Calculator Section */}
       <main
         className="container mx-auto px-4 py-8 max-w-7xl"
         data-calculator-section
       >
         <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
-          {/* Mobile: dropdown */}
           <div className="md:hidden mb-6">
             <select
               value={activeTab}
@@ -300,8 +285,6 @@ const Index = () => {
               ))}
             </select>
           </div>
-
-          {/* Desktop: tabs */}
           <TabsList className="hidden md:grid grid-cols-3 lg:grid-cols-7 gap-2 bg-muted p-2 rounded-lg mb-8">
             {filteredCalculators.map((calc) => {
               const IconComponent = calc.icon;
@@ -322,8 +305,6 @@ const Index = () => {
               );
             })}
           </TabsList>
-
-          {/* Calculator Content */}
           {filteredCalculators.map((calc) => {
             const CalculatorComponent = calc.component;
             const Icon = calc.icon;
@@ -347,25 +328,19 @@ const Index = () => {
                   </CardHeader>
                   <CardContent>
                     <div className="grid lg:grid-cols-3 gap-6">
-                      {/* Main Calculator Content */}
                       <div className="lg:col-span-2">
                         <CalculatorComponent />
                       </div>
-
-                      {/* Sidebar with Ads and Monetization */}
                       <div className="space-y-4">
                         {calc.id === "loan-emi" && <LoanAffiliateCards />}
                         {calc.id === "currency" && <CurrencyAffiliateCards />}
                         {calc.id === "health" && <HealthAffiliateCards />}
-
                         {(calc.id === "basic" || calc.id === "loan-emi") && (
                           <PremiumUpgrade className="hidden lg:block" />
                         )}
-
                         {calc.id === "percentage-tip" && (
                           <EmailCapture className="hidden lg:block" />
                         )}
-
                         <AdRectangle className="hidden lg:block" />
                       </div>
                     </div>
@@ -376,7 +351,6 @@ const Index = () => {
           })}
         </Tabs>
 
-        {/* No results found */}
         {filteredCalculators.length === 0 && (
           <div className="text-center py-12">
             <p className="text-xl text-muted-foreground mb-4">
@@ -391,8 +365,6 @@ const Index = () => {
             </Button>
           </div>
         )}
-
-        {/* Mobile monetization section */}
         <div className="lg:hidden space-y-6 mt-12">
           <PremiumUpgrade />
           <EmailCapture />
@@ -400,7 +372,6 @@ const Index = () => {
         </div>
       </main>
 
-      {/* Footer */}
       <footer className="bg-muted py-8 px-4 mt-16">
         <div className="container mx-auto max-w-4xl text-center">
           <p className="text-muted-foreground">
@@ -408,6 +379,12 @@ const Index = () => {
             everyday use.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm">
+            <Link
+              to="/about"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              About
+            </Link>
             <Link
               to="/privacy"
               className="text-muted-foreground hover:text-foreground"
@@ -430,10 +407,8 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* JSON-LD Schema */}
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
