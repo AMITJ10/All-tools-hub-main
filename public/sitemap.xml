@@ -1,81 +1,77 @@
+<!-- public/sitemap.xml -->
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://calculatorapps.net/</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://calculatorapps.net/emi</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://calculatorapps.net/sip</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://calculatorapps.net/gst</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://calculatorapps.net/unit</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://calculatorapps.net/currency</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://calculatorapps.net/basic</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/percentage-tip</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/currency-converter</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/loan-emi-calculator</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/bmi-calculator</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/unit-converter</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/sip-calculator</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://calculatorapps.net/privacy</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+   <url>
+    <loc>https://calculatorapps.net/terms</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+   <url>
+    <loc>https://calculatorapps.net/contact</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://calculatorapps.net/about</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
   </url>
 </urlset>
