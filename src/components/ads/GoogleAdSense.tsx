@@ -1,3 +1,5 @@
+// src/components/ads/GoogleAdSense.tsx
+
 import React, { useEffect } from 'react';
 
 interface GoogleAdSenseProps {
@@ -35,7 +37,7 @@ export const GoogleAdSense: React.FC<GoogleAdSenseProps> = ({
       <ins
         className="adsbygoogle"
         style={{ display: 'block', ...style }}
-        data-ad-client="ca-pub-YOUR_PUBLISHER_ID" // Replace with your AdSense Publisher ID
+        data-ad-client="ca-pub-4776566266377633" // ✅ Correct Publisher ID
         data-ad-slot={adSlot}
         data-ad-format={adFormat}
         data-full-width-responsive="true"
