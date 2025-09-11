@@ -1,3 +1,5 @@
+// src/pages/BmiPage.tsx
+
 import { Helmet } from "react-helmet-async";
 import { BMICalculator } from "@/components/calculators/BMICalculator";
 import {
@@ -40,85 +42,60 @@ export default function BmiPage() {
           </CardContent>
         </Card>
 
-        <div className="prose dark:prose-invert max-w-none space-y-6">
+        <article className="prose dark:prose-invert max-w-none space-y-6">
           <h2 className="text-2xl font-semibold">
-            Understanding Your BMI Results
+            Understanding Your Body Mass Index (BMI)
           </h2>
           <p>
-            Body Mass Index (BMI) is a measure that uses your height and weight
-            to work out if your weight is healthy. The BMI calculation divides
-            an adult's weight in kilograms by their height in metres squared.
-            This calculator provides your BMI and the corresponding WHO-defined
-            category.
+            Body Mass Index (BMI) is a widely used measure that uses your height and weight
+            to determine if your weight is within a healthy range. The BMI calculation divides
+            an adult's weight in kilograms by their height in metres squared. While it's a useful
+            starting point for assessing weight status at a population level, it's important to
+            understand its context and limitations for individual health.
           </p>
 
-          <h3 className="text-xl font-semibold">How to Use the Calculator</h3>
-          <ol>
-            <li>
-              <strong>Select Your Units:</strong> Choose between Metric (cm,
-              kg) or Imperial (inches, lbs) units.
-            </li>
-            <li>
-              <strong>Enter Your Details:</strong> Input your height, weight,
-              age, and gender.
-            </li>
-            <li>
-              <strong>Choose Activity Level:</strong> Select the option that
-              best describes your weekly physical activity. This is used to
-              estimate your daily calorie needs.
-            </li>
-            <li>
-              <strong>View Your Results:</strong> The calculator will
-              instantly display your BMI, health category, estimated daily
-              calorie needs, and recommended water intake.
-            </li>
-          </ol>
+          <h3 className="text-xl font-semibold">How to Interpret Your BMI Result</h3>
+          <p>The World Health Organization (WHO) defines the following BMI categories for adults:</p>
+          <ul>
+            <li><strong>Below 18.5:</strong> Underweight</li>
+            <li><strong>18.5 – 24.9:</strong> Normal or Healthy Weight</li>
+            <li><strong>25.0 – 29.9:</strong> Overweight</li>
+            <li><strong>30.0 and Above:</strong> Obese</li>
+          </ul>
+           <p>
+            Achieving and maintaining a healthy weight can help reduce the risk of several chronic
+            diseases, including heart disease, type 2 diabetes, and certain types of cancer.
+            This calculator provides your BMI and the corresponding category to help you on your health journey.
+          </p>
 
-          <h3 className="text-xl font-semibold">The BMI Formula</h3>
-          <p>
-            The BMI is calculated using the following formula:
+          <h3 className="text-xl font-semibold">Beyond BMI: Daily Calorie and Water Intake</h3>
+           <p>
+            This tool does more than just calculate your BMI. It also estimates your daily calorie needs and recommended water intake.
+            Your daily calorie needs are estimated using the Mifflin-St Jeor equation, which takes into account your age, gender, height, weight, and activity level to provide a personalized estimate of the energy your body requires to maintain its current weight.
           </p>
-          <pre className="bg-muted p-4 rounded-md">
-            <code>BMI = weight (kg) / (height (m) * height (m))</code>
-          </pre>
-          <p>
-            For imperial units, the calculation is:
-          </p>
-          <pre className="bg-muted p-4 rounded-md">
-            <code>BMI = (weight (lbs) / (height (in) * height (in))) * 703</code>
-          </pre>
-          
+
           <h3 className="text-xl font-semibold">Frequently Asked Questions</h3>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger>What do the BMI categories mean?</AccordionTrigger>
+              <AccordionTrigger>Is BMI an accurate measure of health for everyone?</AccordionTrigger>
               <AccordionContent>
-                The standard BMI categories are: Below 18.5 (Underweight),
-                18.5–24.9 (Normal or Healthy Weight), 25.0–29.9 (Overweight),
-                and 30.0 and above (Obese).
+                BMI is a useful screening tool, but it has limitations. It does not distinguish between fat and muscle mass. For example, a very muscular person (like an athlete) could have a high BMI and be classified as "overweight" despite having very low body fat. Conversely, an older adult with significant muscle loss might have a "normal" BMI while having excess body fat. Therefore, it's best used in conjunction with other health metrics like waist circumference and a consultation with a healthcare professional.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>Is BMI accurate for everyone?</AccordionTrigger>
+              <AccordionTrigger>How is the daily calorie need calculated?</AccordionTrigger>
               <AccordionContent>
-                BMI is a useful population-level measure but may not be
-                accurate for individuals with high muscle mass (like
-                athletes) or for older adults. It does not distinguish between
-                fat and muscle mass. Always consult a healthcare professional
-                for a comprehensive health assessment.
+                We use the Mifflin-St Jeor equation, which is considered one of the most accurate methods for calculating Basal Metabolic Rate (BMR). The formula is: BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) + (a gender-specific value: +5 for men, -161 for women). This BMR is then multiplied by an activity factor (from 1.2 for sedentary to 1.9 for extremely active) to estimate your total daily calorie needs.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger>Why are age and gender required?</AccordionTrigger>
+              <AccordionTrigger>Why is knowing my BMI important?</AccordionTrigger>
               <AccordionContent>
-                Age and gender are not used for the core BMI calculation but
-                are essential for estimating your daily calorie needs using
-                the Mifflin-St Jeor equation, which provides a more accurate
-                metabolic rate estimate.
+                Knowing your BMI can be an important first step in understanding your health. A BMI outside the "normal" range can be an indicator of potential health risks. If your BMI is high, it may suggest an increased risk for conditions like hypertension, high cholesterol, and diabetes. If it's too low, it could indicate nutritional deficiencies or other health issues. It serves as a prompt to have a more in-depth conversation with your doctor about your overall health.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-        </div>
+        </article>
       </div>
     </main>
   );
