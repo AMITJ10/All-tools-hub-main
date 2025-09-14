@@ -1,7 +1,7 @@
 // src/pages/About.tsx
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Users, Target, Rocket, ShieldCheck, Heart, GitCommit } from 'lucide-react';
+import { Users, Target, Rocket, ShieldCheck, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import oneCalcLogo from '@/assets/onecalc-logo.png';
 
@@ -22,7 +22,8 @@ const About = () => {
       </header>
 
       <main className="container mx-auto px-4 py-12 max-w-4xl">
-        <article className="prose dark:prose-invert max-w-none space-y-12">
+        {/* FIX: Replaced <article className="prose ..."> with a simple <div> to prevent rendering conflicts */}
+        <div className="max-w-none space-y-12">
           <div className="text-center space-y-4">
             <img src={oneCalcLogo} alt="CalculatorApps Logo" className="w-24 h-24 mx-auto mb-4" />
             <h1 className="text-4xl font-bold text-foreground">Making Calculations Simple and Accessible</h1>
@@ -32,7 +33,7 @@ const About = () => {
           </div>
 
           <section>
-            <h2 className="text-3xl font-bold">Our Mission: Clarity in a Complex World</h2>
+            <h2 className="text-3xl font-bold mb-4">Our Mission: Clarity in a Complex World</h2>
             <p className="text-muted-foreground leading-relaxed">
               In a world saturated with data, making informed decisions can be overwhelming. Our mission is to cut through the noise by providing simple, accurate, and powerful tools that help you make sense of the numbers. Whether you're a student trying to understand a complex formula, a homeowner planning a budget, or a professional needing a quick conversion, CalculatorApps is designed to give you clear, instant answers. We are committed to building a trusted resource that supports your financial, health, and educational goals.
             </p>
@@ -72,7 +73,7 @@ const About = () => {
           </section>
 
           <section>
-            <h2 className="text-3xl font-bold">The Technology Behind Our Tools</h2>
+            <h2 className="text-3xl font-bold mb-4">The Technology Behind Our Tools</h2>
             <p className="text-muted-foreground leading-relaxed">
               CalculatorApps is built using a modern technology stack to ensure a fast, secure, and reliable experience. Our front-end is powered by React and Vite, allowing for a lightning-fast user interface. We use TypeScript for code quality and maintainability. All calculations are performed directly in your browser, which means your data is private and the results are instantaneous. For tools like our Currency Converter, we connect to trusted real-time APIs to provide the most up-to-date information.
             </p>
@@ -87,7 +88,7 @@ const About = () => {
                 <Link to="/contact">Get in Touch</Link>
               </Button>
             </div>
-        </article>
+        </div>
       </main>
     </div>
   );
