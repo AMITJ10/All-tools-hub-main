@@ -15,7 +15,7 @@ const About = () => {
               <Users className="w-6 h-6 text-primary" />
             </div>
             <h1 className="text-3xl font-bold tracking-tight">
-              <span className="text-gradient">About CalculatorApps</span>
+              <span className="text-gradient">About OneCalc</span>
             </h1>
           </div>
         </div>
