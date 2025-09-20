@@ -1,3 +1,5 @@
+// src/pages/Terms.tsx
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { FileText, AlertTriangle, Users, Gavel } from 'lucide-react';
 
@@ -20,204 +22,87 @@ const Terms = () => {
 
       {/* Content */}
       <main className="container mx-auto px-4 py-12 max-w-4xl">
-        <div className="space-y-8">
+        <article className="prose dark:prose-invert max-w-none space-y-8">
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold text-foreground">Terms of Service</h1>
             <p className="text-xl text-muted-foreground">
-              Please read these terms carefully before using calculator services.
+              Please read these terms carefully before using the calculatorapps.net website.
             </p>
             <p className="text-sm text-muted-foreground">
-              Last updated: September 1, 2025
+              Last Updated: September 15, 2025
             </p>
           </div>
 
-          <div className="grid gap-6">
-            <Card className="glass border-2">
+          <section>
+            <h2 className="text-2xl font-semibold">1. Acceptance of Terms</h2>
+            <p>
+              By accessing and using the website calculatorapps.net ("the Service"), operated by the CalculatorApps team ("us", "we", or "our"), you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to abide by these terms, please do not use the Service.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold">2. Description of Service</h2>
+            <p>
+              The Service provides a suite of free online calculation and conversion tools for informational purposes. These tools are provided "as is" without any warranties of accuracy or reliability. The calculations should not be used as a substitute for professional financial, medical, or engineering advice.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold">3. User Responsibilities</h2>
+            <p>As a user of the Service, you agree to the following:</p>
+            <ul>
+              <li>You will use the tools for lawful and personal, non-commercial purposes only.</li>
+              <li>You are responsible for independently verifying the accuracy and applicability of any calculation results before making any decisions based on them.</li>
+              <li>You will not use any automated system, such as "robots" or "spiders," to access the Service in a manner that sends more request messages to our servers than a human can reasonably produce in the same period.</li>
+              <li>You will not attempt to interfere with the proper working of the Service.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold">4. Disclaimer of Warranties and Limitation of Liability</h2>
+            <Card className="glass border-2 border-destructive/50">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Users className="w-5 h-5 text-primary" />
-                  Acceptance of Terms
+                <CardTitle className="flex items-center gap-2 text-destructive">
+                  <AlertTriangle className="w-5 h-5" />
+                  Important Disclaimers
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  By accessing and using calculator ("the Service"), you accept and agree to be bound by these Terms of Service. 
-                  If you do not agree to these terms, please do not use our services. These terms apply to all visitors, 
-                  users, and others who access or use the Service.
-                </p>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <p><strong>No Financial Advice:</strong> The content and tools on calculatorapps.net are for informational purposes only and do not constitute financial, legal, or medical advice. You should consult with a qualified professional before making any financial or health-related decisions.</p>
+                <p><strong>Accuracy Disclaimer:</strong> While we make every effort to ensure the accuracy of our calculators and the data they use (such as currency exchange rates), we cannot guarantee that all information will be error-free. We shall not be liable for any losses or damages arising from inaccuracies.</p>
+                <p><strong>Limitation of Liability:</strong> In no event shall CalculatorApps or its owners be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or the inability to use our service.</p>
               </CardContent>
             </Card>
+          </section>
 
-            <Card className="glass border-2">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-accent-health" />
-                  Description of Service
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  Calculator provides free online calculators and financial tools including:
-                </p>
-                <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li>Basic arithmetic calculator</li>
-                  <li>Currency converter with live exchange rates</li>
-                  <li>Loan EMI calculator</li>
-                  <li>SIP (Systematic Investment Plan) calculator</li>
-                  <li>BMI and health calculators</li>
-                  <li>Unit conversion tools</li>
-                  <li>Percentage and tip calculators</li>
-                </ul>
-                <p className="text-muted-foreground">
-                  All calculations are provided for informational purposes only and should not be considered as financial advice.
-                </p>
-              </CardContent>
-            </Card>
+          <section>
+            <h2 className="text-2xl font-semibold">5. Advertising and Third-Party Links</h2>
+            <p>
+              The Service is supported by advertising through partners like Google AdSense. We may also include links to third-party websites or services that are not owned or controlled by CalculatorApps. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.
+            </p>
+          </section>
 
-            <Card className="glass border-2">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Users className="w-5 h-5 text-accent-currency" />
-                  User Responsibilities
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>Use the Service only for lawful purposes</li>
-                  <li>Provide accurate information when using calculators</li>
-                  <li>Not attempt to interfere with the Service's functionality</li>
-                  <li>Not use automated tools to access the Service excessively</li>
-                  <li>Respect intellectual property rights</li>
-                  <li>Not transmit malicious code or viruses</li>
-                </ul>
-              </CardContent>
-            </Card>
+          <section>
+            <h2 className="text-2xl font-semibold">6. Intellectual Property</h2>
+            <p>
+              The Service and its original content, features, and functionality are and will remain the exclusive property of CalculatorApps and its licensors. The Service is protected by copyright, trademark, and other laws. Our trademarks may not be used in connection with any product or service without our prior written consent.
+            </p>
+          </section>
+          
+          <section>
+            <h2 className="text-2xl font-semibold">7. Changes to Terms</h2>
+            <p>
+              We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide notice of material changes by updating the "Last Updated" date at the top of this page. What constitutes a material change will be determined at our sole discretion. Your continued use of the Service after any such changes constitutes your acceptance of the new Terms.
+            </p>
+          </section>
 
-            <Card className="glass border-2">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-accent-health" />
-                  Disclaimers & Limitations
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h3 className="font-semibold mb-2">No Financial Advice</h3>
-                  <p className="text-muted-foreground">
-                    Calculator provides calculation tools only. Results should not be considered as financial, investment, 
-                    or professional advice. Always consult qualified professionals for financial decisions.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Accuracy Disclaimer</h3>
-                  <p className="text-muted-foreground">
-                    While we strive for accuracy, we cannot guarantee the precision of all calculations or exchange rates. 
-                    Users should verify important calculations independently.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Service Availability</h3>
-                  <p className="text-muted-foreground">
-                    We do not guarantee uninterrupted service availability and reserve the right to modify or 
-                    discontinue features without notice.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="glass border-2">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Gavel className="w-5 h-5 text-primary" />
-                  Intellectual Property
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h3 className="font-semibold mb-2">Our Rights</h3>
-                  <p className="text-muted-foreground">
-                    The Calculator service, including design, text, graphics, and software, is owned by us and 
-                    protected by copyright and other intellectual property laws.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Your License</h3>
-                  <p className="text-muted-foreground">
-                    We grant you a limited, non-exclusive, non-transferable license to use Calculator for personal, 
-                    non-commercial purposes in accordance with these terms.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="glass border-2">
-              <CardHeader>
-                <CardTitle>Privacy & Data</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Your privacy is important to us. Please review our Privacy Policy to understand how we collect, 
-                  use, and protect your information. Calculator data is stored locally on your device and not 
-                  transmitted to our servers.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="glass border-2">
-              <CardHeader>
-                <CardTitle>Advertising</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Calculator displays advertisements through Google AdSense and may contain affiliate links. 
-                  We are not responsible for the content of third-party advertisements or the products/services 
-                  they promote.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="glass border-2">
-              <CardHeader>
-                <CardTitle>Limitation of Liability</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Calculator shall not be liable for any direct, indirect, incidental, special, or consequential damages 
-                  resulting from the use or inability to use our service. This includes but is not limited to damages 
-                  for loss of profits, data, or other intangible losses.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="glass border-2">
-              <CardHeader>
-                <CardTitle>Changes to Terms</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  We reserve the right to modify these terms at any time. Changes will be effective immediately 
-                  upon posting. Your continued use of Calculator-OneCalc after changes constitutes acceptance of the new terms.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="glass border-2">
-              <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  For questions about these Terms of Service, contact us at:
-                </p>
-                <div className="space-y-2">
-                  <p><strong>Email:</strong> calculatoraiask@gmail.com</p>
-                  {/* <p><strong>Address:</strong> Calculator-ai Legal Team, 123 Calculator Street, Mumbai, India 400001</p> */}
-                  {/* <p><strong>Phone:</strong> +91-9876543210</p> */}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+          <section>
+            <h2 className="text-2xl font-semibold">8. Contact Information</h2>
+            <p>
+              If you have any questions about these Terms, please contact us via our <Link to="/contact" className="text-primary hover:underline">contact page</Link> or by emailing us directly at calculatoraiask@gmail.com.
+            </p>
+          </section>
+        </article>
       </main>
     </div>
   );
