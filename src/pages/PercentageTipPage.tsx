@@ -1,3 +1,5 @@
+// src/pages/PercentageTipPage.tsx
+
 import { Helmet } from "react-helmet-async";
 import { PercentageTipCalculator } from "@/components/calculators/PercentageTipCalculator";
 import {
@@ -24,7 +26,7 @@ export default function PercentageTipPage() {
         <div className="text-center">
             <h1 className="text-4xl font-bold mb-2">Percentage & Tip Calculator</h1>
             <p className="text-lg text-muted-foreground">
-                Easily calculate tips, split bills, and solve percentage problems in seconds.
+                Easily calculate tips, split bills, and solve a wide range of percentage problems in seconds.
             </p>
         </div>
         
@@ -32,42 +34,50 @@ export default function PercentageTipPage() {
             <PercentageTipCalculator />
         </Card>
 
-        <div className="prose dark:prose-invert max-w-none space-y-6">
-            <h2 className="text-2xl font-semibold">Mastering Percentages and Tips</h2>
+        <article className="prose dark:prose-invert max-w-none space-y-6">
+            <h2 className="text-2xl font-semibold">Mastering Percentages and Tipping Etiquette</h2>
             <p>
-                Whether you're dining out, shopping during a sale, or just need to solve a quick math problem, understanding percentages is key. This tool is designed to be a versatile assistant for all your percentage-related needs. It functions as a powerful tip calculator, allowing you to easily split the bill among friends, and also as a general percentage calculator for discounts, increases, and more.
+                Percentages are a fundamental part of daily life, from calculating a discount at your favorite store to leaving a fair tip at a restaurant. This versatile tool is designed to be your go-to assistant for all percentage-related calculations. It functions as a powerful tip calculator, simplifying the process of splitting a bill among friends, and also serves as a general percentage calculator for discounts, tax, and much more.
             </p>
 
-            <h3 className="text-xl font-semibold">How to Use This Calculator</h3>
+            <h3 className="text-xl font-semibold">How to Use This Multi-Purpose Calculator</h3>
             <ol>
-                <li><strong>Enter Bill Amount:</strong> Input the total amount of your bill or the base value for your percentage calculation.</li>
-                <li><strong>Set Tip Percentage:</strong> Use the input field or the quick-select buttons (10%, 15%, etc.) to set the tip percentage.</li>
-                <li><strong>Split the Bill:</strong> If you are sharing the cost, enter the number of people to split the bill with.</li>
-                <li><strong>Check the Results:</strong> The calculator instantly provides the tip amount, total bill, and the amount per person if applicable.</li>
+                <li><strong>Enter Base Amount:</strong> Input the total bill amount for tipping, or the original price for a discount calculation.</li>
+                <li><strong>Set the Percentage:</strong> Enter the percentage you wish to calculate. For tipping, you can use the quick-select buttons (15%, 18%, 20%) for common rates.</li>
+                <li><strong>Split the Bill (Optional):</strong> If you are sharing the cost, enter the number of people to divide the total amount evenly.</li>
+                <li><strong>Review Your Results:</strong> The calculator instantly provides a clear breakdown, including the tip/percentage amount, the total, and the amount per person if applicable.</li>
             </ol>
+
+            <h3 className="text-xl font-semibold">Understanding Percentages in Daily Life</h3>
+            <p>Beyond tipping, this tool can help you with many common scenarios:</p>
+            <ul>
+                <li><strong>Shopping Sales:</strong> Want to know the final price of a $150 jacket that's 30% off? Enter 150 as the bill amount and 30 as the percentage. The "Tip Amount" ($45) is your discount, and the total minus the tip ($105) is your final price.</li>
+                <li><strong>Calculating Tax:</strong> If sales tax is 8.5% on a $200 item, enter 200 as the bill amount and 8.5 as the percentage. The "Tip Amount" ($17) is your tax, and the "Total Amount" ($217) is your final cost.</li>
+                <li><strong>Statistical Analysis:</strong> If you need to find what percentage one number is of another, you can use the formula: `(Part / Whole) * 100`.</li>
+            </ul>
             
             <h3 className="text-xl font-semibold">Frequently Asked Questions</h3>
             <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
-                    <AccordionTrigger>What is a standard tip percentage?</AccordionTrigger>
+                    <AccordionTrigger>What is a standard tip percentage in the U.S.?</AccordionTrigger>
                     <AccordionContent>
-                        In many countries like the United States, a standard tip for good service at a restaurant is between 15% and 20% of the pre-tax bill amount. Our calculator includes quick buttons for these common percentages.
+                        While tipping is discretionary, in the United States, a standard tip for good restaurant service is generally between 15% and 20% of the pre-tax bill. For excellent service, 25% is not uncommon. For other services like food delivery or hairdressers, 10-15% is a common range.
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
                     <AccordionTrigger>Should I tip on the pre-tax or post-tax amount?</AccordionTrigger>
                     <AccordionContent>
-                        Standard tipping etiquette suggests calculating the tip based on the subtotal of the bill, before sales tax is added. However, some people prefer to tip on the total amount for simplicity.
+                        Standard tipping etiquette suggests calculating the tip based on the subtotal of the bill, before sales tax is added. This is because the tax goes to the government, not the establishment, and service is provided on the goods, not the tax. However, some people prefer to tip on the total amount for simplicity, which is also generally appreciated.
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
-                    <AccordionTrigger>How can I use this for calculating discounts?</AccordionTrigger>
+                    <AccordionTrigger>How can I quickly calculate a tip without a calculator?</AccordionTrigger>
                     <AccordionContent>
-                        You can easily use this tool as a discount calculator. Enter the original price in the "Bill Amount" field and the discount percentage in the "Tip Percentage" field. The "Tip Amount" will then show you the value of the discount.
+                        A popular mental math trick is the "double the tax" method. In many places with an 8-10% sales tax, simply doubling the tax amount will give you a tip in the 16-20% range. Another simple method is to move the decimal point one place to the left to find 10% (e.g., 10% of $50 is $5), and then add half of that for 15% ($5 + $2.50 = $7.50).
                     </AccordionContent>
                 </AccordionItem>
             </Accordion>
-        </div>
+        </article>
       </div>
     </main>
   );
