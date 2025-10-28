@@ -1,3 +1,5 @@
+// src/pages/BasicPage.tsx
+
 import { Helmet } from "react-helmet-async";
 import { BasicCalculator } from "@/components/calculators/BasicCalculator";
 import {
@@ -24,54 +26,62 @@ export default function BasicPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-2">Basic Calculator</h1>
           <p className="text-lg text-muted-foreground">
-            Your everyday tool for quick and easy arithmetic calculations.
+            Your everyday tool for quick, easy, and accurate arithmetic calculations.
           </p>
         </div>
 
-        <Card className="shadow-large">
+        <Card className="shadow-large p-6">
           <BasicCalculator />
         </Card>
 
-        <div className="prose dark:prose-invert max-w-none space-y-6">
+        <article className="prose dark:prose-invert max-w-none space-y-6">
           <h2 className="text-2xl font-semibold">
-            About Our Basic Calculator
+            Why a Simple Calculator is an Essential Tool
           </h2>
           <p>
-            This online basic calculator provides the fundamental functions you need for everyday math. From simple addition and subtraction to multiplication and division, it's a reliable tool for students, professionals, and anyone needing to crunch numbers quickly. It also includes a history feature to track your previous calculations.
+            In a world of complex devices, the simple, focused utility of a basic calculator remains indispensable. This online calculator provides the core functions you need for everyday math without the clutter of scientific notations. It's a reliable tool for students checking their homework, professionals needing a quick calculation, and anyone looking to crunch numbers fast. Our version also includes a history feature to help you track multi-step calculations.
           </p>
           
-          <h3 className="text-xl font-semibold">How to Use the Calculator</h3>
+          <h3 className="text-xl font-semibold">Real-World Applications of Our Basic Calculator</h3>
+          <ul>
+            <li><strong>Personal Finance and Budgeting:</strong> Quickly add up monthly bills, calculate your grocery total before you get to the checkout, or figure out how much you're saving each month.</li>
+            <li><strong>Shopping:</strong> Easily determine the total cost of multiple items or calculate a simple discount.</li>
+            <li><strong>DIY and Home Projects:</strong> Calculate the area of a room (length × width) to buy the right amount of flooring, or add up measurements for a woodworking project.</li>
+            <li><strong>Education:</strong> A perfect tool for elementary and middle school students to verify their arithmetic homework without the distraction of a more complex calculator.</li>
+          </ul>
+
+          <h3 className="text-xl font-semibold">Features and Functions</h3>
           <ul>
             <li><strong>Number Keys (0-9):</strong> Click to enter numbers.</li>
-            <li><strong>Operator Keys (+, -, ×, ÷):</strong> Use these for arithmetic operations.</li>
-            <li><strong>Equals (=):</strong> Press to compute the final result of an expression.</li>
-            <li><strong>C (Clear):</strong> Clears the current display and any ongoing calculation.</li>
-            <li><strong>⌫ (Backspace):</strong> Deletes the last digit entered.</li>
-            <li><strong>. (Decimal):</strong> Adds a decimal point for floating-point numbers.</li>
+            <li><strong>Operator Keys (+, -, ×, ÷):</strong> Use these for the four basic arithmetic operations.</li>
+            <li><strong>Equals (=):</strong> Press to compute the final result of your expression.</li>
+            <li><strong>C (Clear):</strong> Clears the current entry and resets any ongoing calculation.</li>
+            <li><strong>⌫ (Backspace):</strong> Deletes the last digit you entered, allowing for easy correction of mistakes.</li>
+            <li><strong>. (Decimal):</strong> Adds a decimal point for calculations involving non-integer numbers.</li>
           </ul>
 
           <h3 className="text-xl font-semibold">Frequently Asked Questions</h3>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger>Does this calculator support keyboard input?</AccordionTrigger>
+              <AccordionTrigger>Can I use my keyboard with this calculator?</AccordionTrigger>
               <AccordionContent>
-                Yes! For faster use, you can use your keyboard's number pad for digits and operators (+, -, *, /) and the Enter key for equals.
+                Yes! For a faster and more efficient experience, you can use your computer's keyboard. The number keys, the operator keys (+, -, *, /), the Enter key (for equals), and the Backspace key are all supported.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>How does the calculation history work?</AccordionTrigger>
+              <AccordionTrigger>What is the benefit of the calculation history?</AccordionTrigger>
               <AccordionContent>
-                The calculator automatically saves your last 10 completed calculations. The history is cleared when you refresh the page or click the "Clear History" button.
+                The calculator automatically saves your last 10 completed calculations. This is incredibly useful for double-checking your work or when you need to use the result of a previous calculation in a new one without having to write it down or remember it. The history is cleared when you refresh the page.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger>What happens if I divide by zero?</AccordionTrigger>
+              <AccordionTrigger>What happens if I make a mistake like dividing by zero?</AccordionTrigger>
               <AccordionContent>
-                Dividing by zero is an undefined operation in mathematics. Our calculator will return a result of 0 and will not show an error to ensure a smooth user experience.
+                Dividing by zero is a mathematical impossibility. To prevent errors that interrupt your workflow, our calculator will simply return a result of '0' in this case, allowing you to continue your calculations smoothly.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-        </div>
+        </article>
       </div>
     </main>
   );
