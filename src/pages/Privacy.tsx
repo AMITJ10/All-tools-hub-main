@@ -1,9 +1,21 @@
+// src/pages/Privacy.tsx
+
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, Eye, Lock, UserCheck } from 'lucide-react';
 
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Privacy Policy – CalculatorApps</title>
+        <meta
+          name="description"
+          content="Read the Privacy Policy for CalculatorApps to understand how we handle analytics data, cookies, calculator inputs, and advertising via Google AdSense."
+        />
+        <link rel="canonical" href="https://calculatorapps.net/privacy" />
+      </Helmet>
+
       {/* Header */}
       <header className="glass border-b border-border/50 shadow-soft">
         <div className="container mx-auto px-4 py-6 max-w-6xl">
@@ -24,10 +36,10 @@ const Privacy = () => {
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold text-foreground">Privacy Policy</h1>
             <p className="text-xl text-muted-foreground">
-              Your privacy is important to us. This policy explains how Calculator handles your data.
+              Your privacy is important to us. This policy explains how CalculatorApps handles your data.
             </p>
             <p className="text-sm text-muted-foreground">
-              Last updated: september 1, 2025
+              Last updated: September 1, 2025
             </p>
           </div>
 
@@ -45,15 +57,15 @@ const Privacy = () => {
                   <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                     <li>Device information (browser type, operating system)</li>
                     <li>Usage data (pages visited, time spent on site)</li>
-                    <li>IP address and location data</li>
+                    <li>IP address and approximate location data</li>
                     <li>Cookies and similar tracking technologies</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Information You Provide</h3>
                   <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                    <li>Email address (when subscribing to newsletters)</li>
-                    <li>Calculator inputs (stored locally on your device)</li>
+                    <li>Email address (when subscribing to newsletters or contacting us)</li>
+                    <li>Calculator inputs (processed in your browser and not stored on our servers)</li>
                     <li>Feedback and contact form submissions</li>
                   </ul>
                 </div>
@@ -70,8 +82,8 @@ const Privacy = () => {
               <CardContent>
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                   <li>To provide and improve our calculator services</li>
-                  <li>To personalize your experience on Calculator-OneCalc</li>
-                  <li>To send newsletters and updates (with your consent)</li>
+                  <li>To personalize your experience on CalculatorApps</li>
+                  <li>To send newsletters and updates (only if you opt in)</li>
                   <li>To analyze usage patterns and optimize performance</li>
                   <li>To display relevant advertisements through Google AdSense</li>
                   <li>To respond to your inquiries and provide customer support</li>
@@ -88,21 +100,21 @@ const Privacy = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h3 className="font-semibold mb-2">Local Storage</h3>
+                  <h3 className="font-semibold mb-2">Local Processing</h3>
                   <p className="text-muted-foreground">
-                    Your calculator data is stored locally on your device and is not transmitted to our servers.
+                    Wherever possible, your calculator inputs are processed directly in your browser and are not transmitted to our servers.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Data Encryption</h3>
                   <p className="text-muted-foreground">
-                    All data transmission is encrypted using industry-standard SSL/TLS protocols.
+                    All data transmission between your browser and our website is encrypted using industry-standard SSL/TLS protocols.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Third-Party Services</h3>
                   <p className="text-muted-foreground">
-                    We use Google Analytics and Google AdSense, which have their own privacy policies.
+                    We use Google Analytics and Google AdSense, which collect data in line with their own privacy policies. These services may use cookies and similar technologies to measure usage and serve personalized or non-personalized ads.
                   </p>
                 </div>
               </CardContent>
@@ -113,23 +125,23 @@ const Privacy = () => {
                 <CardTitle>Cookies & Tracking</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
+                <div className="space-y-4 text-muted-foreground">
                   <div>
                     <h3 className="font-semibold mb-2">Essential Cookies</h3>
-                    <p className="text-muted-foreground">
-                      Required for basic site functionality and your preferences.
+                    <p>
+                      Required for basic site functionality, such as remembering your preferences and keeping the site secure.
                     </p>
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2">Analytics Cookies</h3>
-                    <p className="text-muted-foreground">
-                      Help us understand how you use our site to improve user experience.
+                    <p>
+                      Help us understand how you use our site so that we can improve navigation, content, and performance over time.
                     </p>
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2">Advertising Cookies</h3>
-                    <p className="text-muted-foreground">
-                      Used by Google AdSense to display relevant advertisements.
+                    <p>
+                      Used by Google AdSense and its partners to display relevant advertisements. Google and its partners may use cookies to serve ads based on your visits to this and/or other sites on the internet. You can opt out of personalized advertising through your Google Ads settings.
                     </p>
                   </div>
                 </div>
@@ -145,8 +157,7 @@ const Privacy = () => {
                   <li>Right to access your personal data</li>
                   <li>Right to rectify or update your information</li>
                   <li>Right to delete your data (where applicable)</li>
-                  <li>Right to object to data processing</li>
-                  <li>Right to data portability</li>
+                  <li>Right to object to certain types of data processing</li>
                   <li>Right to withdraw consent at any time</li>
                 </ul>
               </CardContent>
@@ -158,11 +169,12 @@ const Privacy = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  If you have any questions about this Privacy Policy, please contact us at:
+                  If you have any questions about this Privacy Policy or how your data is handled, please contact us at:
                 </p>
                 <div className="space-y-2">
-                  <p><strong>Email:</strong> calculatoraiask@gmail.com</p>
-  
+                  <p>
+                    <strong>Email:</strong> calculatoraiask@gmail.com
+                  </p>
                 </div>
               </CardContent>
             </Card>
