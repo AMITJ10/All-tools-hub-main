@@ -172,12 +172,12 @@ const Index = () => {
                     alt="CalculatorApps Logo"
                     className="w-16 h-16 mr-4"
                   />
-                  <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
+                  <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight">
                     <span className="block text-gradient bg-gradient-to-r from-primary via-accent-health to-accent-currency bg-clip-text">
                       CalculatorApps
                     </span>
                   </h1>
-                </div>
+                 </div>
                 <p className="text-2xl md:text-3xl font-medium text-muted-foreground">
                   Convert, Compute, Plan – in One Place
                 </p>
