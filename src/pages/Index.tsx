@@ -37,6 +37,7 @@ import {
 import { PremiumUpgrade, EmailCapture } from "@/components/ads/PremiumFeatures";
 import heroImage from "@/assets/hero-calculator.jpg";
 import oneCalcLogo from "@/assets/onecalc-logo.png";
+import { Helmet } from "react-helmet-async";
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -132,8 +133,21 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>
+          CalculatorApps – Free Online Calculators & Converters for Everyday
+          Use
+        </title>
+        <meta
+          name="description"
+          content="CalculatorApps is your all-in-one hub for free online calculators and converters. Use our basic calculator, percentage & tip calculator, SIP calculator, loan EMI calculator, BMI calculator, unit converter and currency converter – all mobile-friendly and lightning fast."
+        />
+        <link rel="canonical" href="https://calculatorapps.net/" />
+      </Helmet>
+
       <Navigation searchQuery={searchQuery} onSearchChange={setSearchQuery} />
 
+      {/* HERO SECTION */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background-secondary to-background"></div>
@@ -155,24 +169,24 @@ const Index = () => {
                 <div className="flex items-center justify-center lg:justify-start mb-4">
                   <img
                     src={oneCalcLogo}
-                    alt="OneCalc Logo"
+                    alt="CalculatorApps Logo"
                     className="w-16 h-16 mr-4"
                   />
                   <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
                     <span className="block text-gradient bg-gradient-to-r from-primary via-accent-health to-accent-currency bg-clip-text">
-                      Calculator App
+                      CalculatorApps
                     </span>
                   </h1>
                 </div>
                 <p className="text-2xl md:text-3xl font-medium text-muted-foreground">
-                  Convert, Compute, Plan
+                  Convert, Compute, Plan – in One Place
                 </p>
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                Free, fast, and accurate calculators for everyday needs. Currency
-                conversion, loan EMI, BMI, unit conversions, tip calculator, and
-                more — all optimized for mobile and desktop with lightning-fast
-                performance.
+                Free, fast, and accurate calculators for everyday decisions.
+                Compare loans, plan SIP investments, convert units and
+                currencies, or quickly find tips and percentages – all in a
+                mobile-first experience designed to save you time.
               </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                 <Button
@@ -193,6 +207,8 @@ const Index = () => {
                 </Button>
               </div>
             </div>
+
+            {/* Quick tiles */}
             <div className="grid grid-cols-2 gap-4">
               <Card
                 className="p-6 border-card-border bg-card/90 backdrop-blur-sm hover:bg-card/95 transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-[1.02] group"
@@ -267,6 +283,7 @@ const Index = () => {
         <AdBanner className="mb-6" />
       </div>
 
+      {/* MAIN CALCULATORS */}
       <main
         className="container mx-auto px-4 py-8 max-w-7xl"
         data-calculator-section
@@ -365,17 +382,140 @@ const Index = () => {
             </Button>
           </div>
         )}
+
         <div className="lg:hidden space-y-6 mt-12">
           <PremiumUpgrade />
           <EmailCapture />
           <AdRectangle />
         </div>
+
+        {/* SEO ARTICLE SECTION */}
+        <section className="mt-16">
+          <article className="prose dark:prose-invert max-w-none space-y-6">
+            <h2>What is CalculatorApps?</h2>
+            <p>
+              CalculatorApps is a collection of practical, no-nonsense tools for
+              everyday calculations. Instead of installing multiple apps or
+              searching for a different website every time you need to compute
+              something, you can bookmark this single hub and access everything
+              in a few clicks – from basic arithmetic to investment planning.
+            </p>
+
+            <h3>All-in-one calculator hub</h3>
+            <p>
+              The homepage gives you quick access to our most-used tools. You
+              can stay here and switch between calculators using the tabs, or
+              you can open dedicated pages like{" "}
+              <Link to="/sip-calculator" className="underline">
+                SIP Calculator
+              </Link>{" "}
+              or{" "}
+              <Link to="/unit-converter" className="underline">
+                Unit Converter
+              </Link>{" "}
+              if you want a focused experience with detailed explanations and
+              FAQs.
+            </p>
+
+            <h3>Overview of the calculators</h3>
+            <ul>
+              <li>
+                <strong>Basic Calculator:</strong> Perform quick addition,
+                subtraction, multiplication and division with a clean interface
+                and calculation history.
+              </li>
+              <li>
+                <strong>Percentage &amp; Tip Calculator:</strong> Work out sale
+                discounts, GST/VAT, tips at restaurants and split-bill amounts
+                without manual math.
+              </li>
+              <li>
+                <strong>Currency Converter:</strong> Convert between major
+                global currencies using up-to-date exchange rates so you can
+                estimate costs while shopping or travelling abroad.
+              </li>
+              <li>
+                <strong>Loan EMI Calculator:</strong> Plan home, car or personal
+                loans by estimating monthly EMI, total interest and total amount
+                payable over the loan tenure.
+              </li>
+              <li>
+                <strong>BMI &amp; Health Calculator:</strong> Quickly check your
+                Body Mass Index and related basic health metrics. This is for
+                general information only and not a medical diagnosis.
+              </li>
+              <li>
+                <strong>Unit Converter:</strong> Convert common units for
+                length, weight, temperature, area, volume and speed – helpful
+                for students, travellers and professionals.
+              </li>
+              <li>
+                <strong>SIP Calculator:</strong> Estimate the future value of
+                your systematic investment plans (SIP) and understand how
+                monthly investing plus compounding can grow your wealth.
+              </li>
+            </ul>
+
+            <h3>Why these pages are useful for Google and users</h3>
+            <p>
+              Every important calculator also has a dedicated page with its own
+              URL, meta description and long-form explanation. For example, the{" "}
+              <Link to="/sip-calculator" className="underline">
+                SIP calculator page
+              </Link>{" "}
+              explains compounding, rupee-cost averaging and how to choose a
+              realistic return assumption. The{" "}
+              <Link to="/unit-converter" className="underline">
+                unit converter page
+              </Link>{" "}
+              walks through metric vs imperial units and real-world use cases.
+              This detailed content helps both users and search engines
+              understand the purpose of each tool.
+            </p>
+
+            <h3>Mobile-first, privacy-friendly design</h3>
+            <p>
+              CalculatorApps is fully responsive, which means every tool adapts
+              to phones, tablets and desktops. We avoid unnecessary clutter and
+              heavy scripts so the pages load quickly even on slower
+              connections. We also do not require login or personal data to use
+              the tools – you simply open the website, use the calculator and
+              move on.
+            </p>
+
+            <h3>How to get the most out of CalculatorApps</h3>
+            <ol>
+              <li>
+                <strong>Bookmark the site:</strong> Save{" "}
+                <a
+                  href="https://calculatorapps.net/"
+                  className="underline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  https://calculatorapps.net/
+                </a>{" "}
+                in your browser for quick access whenever you need a calculator.
+              </li>
+              <li>
+                <strong>Use dedicated pages:</strong> When you want more context
+                and examples, open the separate calculator pages from the
+                navigation links.
+              </li>
+              <li>
+                <strong>Share tools:</strong> If a particular calculator helps
+                you, feel free to share its direct link with friends, family or
+                colleagues.
+              </li>
+            </ol>
+          </article>
+        </section>
       </main>
 
       <footer className="bg-muted py-8 px-4 mt-16">
         <div className="container mx-auto max-w-4xl text-center">
           <p className="text-muted-foreground">
-            © 2025 Calculator App. Free online calculators and converters for
+            © 2025 CalculatorApps. Free online calculators and converters for
             everyday use.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm">
@@ -407,20 +547,21 @@ const Index = () => {
         </div>
       </footer>
 
+      {/* WebSite structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            name: "Calculator App - Free Online Calculator & Converter Tools",
+            name: "CalculatorApps – Free Online Calculator & Converter Tools",
             description:
-              "Calculator App: #1 Free Online Calculator with Currency Converter, Loan EMI Calculator, BMI Calculator, Unit Converter, Tip Calculator & More. Fast, accurate, mobile-optimized calculator tools for 2025.",
-            url: "https://calculator-app.com",
+              "CalculatorApps: Free online calculators including basic calculator, currency converter, loan EMI calculator, BMI calculator, unit converter, percentage & tip calculator, SIP calculator and more.",
+            url: "https://calculatorapps.net/",
             potentialAction: {
               "@type": "SearchAction",
               target:
-                "https://calculator-app.com/#search={search_term_string}",
+                "https://calculatorapps.net/#search={search_term_string}",
               "query-input": "required name=search_term_string",
             },
           }),
