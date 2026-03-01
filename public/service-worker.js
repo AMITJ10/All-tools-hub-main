@@ -25,8 +25,34 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const { request } = event;
+  const url = new URL(request.url);
+
+  // Always bypass cache for crawler-critical files and external requests.
+  if (
+    request.method !== 'GET' ||
+    url.origin !== self.location.origin ||
+    url.pathname === '/ads.txt' ||
+    url.pathname === '/robots.txt' ||
+    url.pathname === '/sitemap.xml'
+  ) {
+    return;
+  }
+
+  // For HTML navigation, prefer fresh network responses to avoid stale route/canonical states.
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, copy)).catch(() => {});
+          return response;
+        })
+        .catch(() => caches.match(request))
+    );
+    return;
+  }
+
   // Only handle GET
-  if (request.method !== 'GET') return;
   event.respondWith(
     caches.match(request).then(cached => {
       const fetchPromise = fetch(request).then(networkResponse => {
