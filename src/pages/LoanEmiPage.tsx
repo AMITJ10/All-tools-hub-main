@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 export default function LoanEmiPage() {
   return (
@@ -38,6 +39,17 @@ export default function LoanEmiPage() {
         <Card className="shadow-large p-6">
             <LoanEMICalculator />
         </Card>
+
+        <section className="rounded-xl border border-border/60 p-5 bg-background-secondary/30">
+          <h2 className="text-2xl font-semibold">Want a deeper explanation?</h2>
+          <p className="mt-2 text-muted-foreground">
+            Read our step-by-step guide with formula derivation, amortization
+            logic, and real numeric examples before finalizing loan decisions.
+          </p>
+          <Link className="inline-block mt-3 text-primary hover:underline font-medium" to="/guides/loan-emi">
+            Read: Complete Loan EMI Guide
+          </Link>
+        </section>
 
         <article className="prose dark:prose-invert max-w-none space-y-6">
           <h2 className="text-2xl font-semibold">
