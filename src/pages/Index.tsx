@@ -143,6 +143,29 @@ const Index = () => {
           content="CalculatorApps is your all-in-one hub for free online calculators and converters. Use our basic calculator, percentage & tip calculator, SIP calculator, loan EMI calculator, BMI calculator, unit converter and currency converter – all mobile-friendly and lightning fast."
         />
         <link rel="canonical" href="https://calculatorapps.net/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                name: "CalculatorApps",
+                url: "https://calculatorapps.net/",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: "https://calculatorapps.net/?q={search_term_string}",
+                  "query-input": "required name=search_term_string",
+                },
+              },
+              {
+                "@type": "Organization",
+                name: "CalculatorApps",
+                url: "https://calculatorapps.net/",
+                logo: "https://calculatorapps.net/icons/icon-512.png",
+              },
+            ],
+          })}
+        </script>
       </Helmet>
 
       <Navigation searchQuery={searchQuery} onSearchChange={setSearchQuery} />
