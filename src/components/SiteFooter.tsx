@@ -99,6 +99,16 @@ export function SiteFooter() {
             Advertising disclosure: we may display ads from Google AdSense to
             keep CalculatorApps free to use.
           </p>
+          <p className="mt-2">
+            <a
+              className="hover:underline"
+              href="https://policies.google.com/technologies/partner-sites"
+              target="_blank"
+              rel="noreferrer"
+            >
+              How Google uses data when you use our partners’ sites or apps
+            </a>
+          </p>
           <p className="mt-2">© {new Date().getFullYear()} CalculatorApps. All rights reserved.</p>
         </div>
       </div>
