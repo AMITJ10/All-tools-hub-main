@@ -16,6 +16,8 @@
       "source": "/(.*)",
       "has": [
         {
+=======
+
           "type": "host",
           "value": "www.calculatorapps.net"
         }
@@ -43,6 +45,7 @@
         {
           "key": "Strict-Transport-Security",
           "value": "max-age=31536000; includeSubDomains; preload"
+
         }
       ]
     }
