@@ -101,6 +101,19 @@ const About = () => {
               Tools like our Currency Converter connect to trusted APIs for the latest real-time data.
             </p>
           </section>
+
+          <section>
+            <h2 className="text-3xl font-bold mb-4">Editorial Quality & Accountability</h2>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              We maintain an editorial process focused on formula clarity,
+              source transparency, and regular maintenance. Learn how pages are
+              reviewed and corrected on our{' '}
+              <Link className="text-primary hover:underline" to="/editorial-policy">
+                Editorial Policy
+              </Link>
+              .
+            </p>
+          </section>
           
           <div className="text-center pt-8 border-t">
             <h2 className="text-2xl font-bold mb-4">We're Always Improving</h2>

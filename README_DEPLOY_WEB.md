@@ -15,6 +15,8 @@ Serve the project over **HTTPS** or plain HTTP for local dev (SW works on localh
 ## Deploy (HTTPS required in production)
 - **Vercel / Netlify / Cloudflare Pages**: push to a Git repo and import. These hosts give HTTPS by default.
 - Make sure `/public/service-worker.js`, `/public/manifest.webmanifest`, and `/public/icons/*` are included in the build output.
+- Keep canonical host/protocol redirects enabled so that `http://` and `www.` variants redirect to `https://calculatorapps.net`.
+- Expected Search Console behavior: `http://calculatorapps.net/` may show under “Page with redirect”, which is normal if HTTPS is the canonical indexable URL.
 
 ## Notes
 - If your app is **Next.js**, assets are now in `public/`. You may keep them as-is. To enhance SW behavior, you can integrate `next-pwa` later.
