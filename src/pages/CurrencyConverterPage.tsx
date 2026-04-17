@@ -9,12 +9,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 export default function CurrencyConverterPage() {
   return (
     <main className="container mx-auto py-10 px-4 max-w-4xl">
       <Helmet>
-        <title>Free Currency Converter – Live Exchange Rates (2025)</title>
+        <title>Free Currency Converter – Live Exchange Rates (2026)</title>
         <meta
           name="description"
           content="Convert currencies instantly with our free online Currency Converter. Updated exchange rates for USD, INR, EUR, GBP, and more, with detailed information and FAQs."
@@ -33,6 +34,18 @@ export default function CurrencyConverterPage() {
         <Card className="shadow-large p-6">
           <CurrencyConverter />
         </Card>
+
+        <section className="rounded-xl border border-border/60 p-5 bg-background-secondary/30">
+          <h2 className="text-2xl font-semibold">Learn how exchange rates really work</h2>
+          <p className="mt-2 text-muted-foreground">
+            See how spreads, fees, and timing impact your final conversion
+            amount with practical examples for travelers and international
+            payments.
+          </p>
+          <Link className="inline-block mt-3 text-primary hover:underline font-medium" to="/guides/currency-exchange">
+            Read: Currency Exchange Guide
+          </Link>
+        </section>
 
         <article className="prose dark:prose-invert max-w-none space-y-6">
           <h2 className="text-2xl font-semibold">

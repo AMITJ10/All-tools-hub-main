@@ -9,13 +9,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 export default function BmiPage() {
   return (
     <main className="container mx-auto py-10 px-4 max-w-4xl">
       <Helmet>
         <title>
-          BMI Calculator Online – Check Body Mass Index & Health (2025)
+          BMI Calculator Online – Check Body Mass Index & Health (2026)
         </title>
         <meta
           name="description"
@@ -41,6 +42,17 @@ export default function BmiPage() {
             <BMICalculator />
           </CardContent>
         </Card>
+
+        <section className="rounded-xl border border-border/60 p-5 bg-background-secondary/30">
+          <h2 className="text-2xl font-semibold">Need a complete BMI guide?</h2>
+          <p className="mt-2 text-muted-foreground">
+            Explore category thresholds, limitations of BMI, and how to combine
+            BMI with other health indicators for better decisions.
+          </p>
+          <Link className="inline-block mt-3 text-primary hover:underline font-medium" to="/guides/bmi">
+            Read: BMI Guide for Better Interpretation
+          </Link>
+        </section>
 
         <article className="prose dark:prose-invert max-w-none space-y-6">
           <h2 className="text-2xl font-semibold">
