@@ -535,61 +535,7 @@ const Index = () => {
         </section>
       </main>
 
-      <footer className="bg-muted py-8 px-4 mt-16">
-        <div className="container mx-auto max-w-4xl text-center">
-          <p className="text-muted-foreground">
-            © 2025 CalculatorApps. Free online calculators and converters for
-            everyday use.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm">
-            <Link
-              to="/about"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              About
-            </Link>
-            <Link
-              to="/privacy"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              Privacy
-            </Link>
-            <Link
-              to="/terms"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              Terms
-            </Link>
-            <Link
-              to="/contact"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      </footer>
 
-      {/* WebSite structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "CalculatorApps – Free Online Calculator & Converter Tools",
-            description:
-              "CalculatorApps: Free online calculators including basic calculator, currency converter, loan EMI calculator, BMI calculator, unit converter, percentage & tip calculator, SIP calculator and more.",
-            url: "https://calculatorapps.net/",
-            potentialAction: {
-              "@type": "SearchAction",
-              target:
-                "https://calculatorapps.net/#search={search_term_string}",
-              "query-input": "required name=search_term_string",
-            },
-          }),
-        }}
-      />
     </div>
   );
 };

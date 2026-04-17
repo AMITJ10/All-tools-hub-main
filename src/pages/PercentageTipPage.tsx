@@ -14,7 +14,7 @@ export default function PercentageTipPage() {
   return (
     <main className="container mx-auto py-10 px-4 max-w-4xl">
       <Helmet>
-        <title>Percentage Calculator & Tip Calculator Online (2025)</title>
+        <title>Percentage Calculator & Tip Calculator Online (2026)</title>
         <meta
           name="description"
           content="Instantly calculate percentages, discounts, and tips with our free Percentage & Tip Calculator. Fast, accurate, and easy to use for splitting bills."
