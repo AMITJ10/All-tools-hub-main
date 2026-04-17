@@ -14,7 +14,7 @@ export default function BasicPage() {
   return (
     <main className="container mx-auto py-10 px-4 max-w-4xl">
       <Helmet>
-        <title>Online Basic Calculator – Free Simple Calculator (2025)</title>
+        <title>Online Basic Calculator – Free Simple Calculator (2026)</title>
         <meta
           name="description"
           content="Use our free online Basic Calculator to perform quick addition, subtraction, multiplication, and division. Mobile-friendly, accurate, and with a calculation history feature."
