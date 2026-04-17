@@ -34,8 +34,14 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server or email service
-    console.log('Form submitted:', formData);
+
+    const subject = encodeURIComponent(
+      `[${formData.category}] ${formData.subject}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nCategory: ${formData.category}\n\nMessage:\n${formData.message}`
+    );
+    window.location.href = `mailto:calculatoraiask@gmail.com?subject=${subject}&body=${body}`;
 
     toast({
       title: 'Message Sent!',
@@ -64,6 +70,7 @@ const Contact = () => {
           content="Contact CalculatorApps for questions, feedback, bug reports or new calculator suggestions. We usually respond within 24–48 business hours."
         />
         <link rel="canonical" href="https://calculatorapps.net/contact" />
+        <meta name="robots" content="index,follow" />
       </Helmet>
 
       <header className="glass border-b border-border/50 shadow-soft">
@@ -212,6 +219,10 @@ const Contact = () => {
                     We are a small team dedicated to providing the best possible
                     experience. We read every message and aim to respond within
                     24–48 business hours.
+                  </p>
+                  <p className="text-sm">
+                    Form submissions open your email app with your message pre-filled,
+                    so you can review and send directly.
                   </p>
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
