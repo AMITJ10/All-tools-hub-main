@@ -37,6 +37,8 @@ export default function LoanEmiPage() {
           </p>
         </div>
 
+
+=======
 =======
 // src/pages/LoanEmiPage.tsx
 
@@ -138,6 +140,7 @@ export default function LoanEmiPage() {
   );
 }
 =======
+=======
           <h2 className="text-2xl font-semibold">
             Understanding Your Loan's Equated Monthly Installment (EMI)
           </h2>
@@ -183,3 +186,4 @@ export default function LoanEmiPage() {
     </main>
   );
 }
+

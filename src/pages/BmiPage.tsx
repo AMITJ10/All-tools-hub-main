@@ -38,6 +38,7 @@ export default function BmiPage() {
         </div>
 
 =======
+=======
 // src/pages/BmiPage.tsx
 
 import { Helmet } from "react-helmet-async";
@@ -94,6 +95,7 @@ export default function BmiPage() {
         </section>
 
         <article className="prose dark:prose-invert max-w-none space-y-6">
+=======
  codex/assist-with-adsense-approval-process-0jv5o1
           <h2 className="text-2xl font-semibold">
             Understanding Your Body Mass Index (BMI)
