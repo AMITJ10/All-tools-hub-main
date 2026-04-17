@@ -15,7 +15,7 @@ export default function CurrencyConverterPage() {
   return (
     <main className="container mx-auto py-10 px-4 max-w-4xl">
       <Helmet>
-        <title>Free Currency Converter – Live Exchange Rates (2025)</title>
+        <title>Free Currency Converter – Live Exchange Rates (2026)</title>
         <meta
           name="description"
           content="Convert currencies instantly with our free online Currency Converter. Updated exchange rates for USD, INR, EUR, GBP, and more, with detailed information and FAQs."
