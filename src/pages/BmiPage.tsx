@@ -54,6 +54,21 @@ export default function BmiPage() {
           </Link>
         </section>
 
+        <section className="rounded-xl border border-border/60 p-5 bg-background-secondary/30">
+          <h2 className="text-2xl font-semibold">How to interpret your BMI result</h2>
+          <p className="mt-2 text-muted-foreground">
+            BMI is a screening measure that compares body weight with height. It
+            can help adults quickly understand whether a result falls in an
+            underweight, normal, overweight, or obesity range, but it does not
+            measure body fat directly.
+          </p>
+          <p className="mt-2 text-muted-foreground">
+            Use the result as a starting point, then consider age, activity, body
+            composition, waist size, and professional medical advice before
+            making health decisions.
+          </p>
+        </section>
+
         <article className="prose dark:prose-invert max-w-none space-y-6">
           <h2 className="text-2xl font-semibold">
             Understanding Your Body Mass Index (BMI)

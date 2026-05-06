@@ -34,6 +34,21 @@ export default function BasicPage() {
           <BasicCalculator />
         </Card>
 
+        <section className="rounded-xl border border-border/60 p-5 bg-background-secondary/30">
+          <h2 className="text-2xl font-semibold">What this calculator is best for</h2>
+          <p className="mt-2 text-muted-foreground">
+            Use this page for everyday arithmetic when you need a quick answer
+            without opening a spreadsheet or scientific calculator. It is ideal
+            for checking bills, adding receipts, comparing prices, calculating
+            small budgets, and reviewing homework steps.
+          </p>
+          <p className="mt-2 text-muted-foreground">
+            The calculator keeps the interface intentionally simple: enter a
+            number, choose an operator, review the result, and use the history
+            panel to confirm recent calculations.
+          </p>
+        </section>
+
         <article className="prose dark:prose-invert max-w-none space-y-6">
           <h2 className="text-2xl font-semibold">
             Why a Simple Calculator is an Essential Tool
