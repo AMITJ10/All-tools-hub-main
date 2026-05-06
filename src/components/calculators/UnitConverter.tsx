@@ -8,6 +8,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Copy, ArrowUpDown } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
+type UnitData = {
+  name: string;
+  symbol: string;
+  toBase: number;
+};
+
 const conversionData = {
   length: {
     name: 'Length',
@@ -63,6 +69,14 @@ const conversionData = {
       fps: { name: 'Feet per Second', symbol: 'ft/s', toBase: 0.3048 }
     }
   }
+} satisfies Record<string, { name: string; units: Record<string, UnitData> }>;
+
+type CategoryKey = keyof typeof conversionData;
+
+const getCategoryData = (cat: string) => conversionData[cat as CategoryKey];
+
+const getUnitData = (cat: string, unit: string): UnitData => {
+  return getCategoryData(cat).units[unit];
 };
 
 export const UnitConverter = () => {
@@ -77,9 +91,8 @@ export const UnitConverter = () => {
       return convertTemperature(value, from, to);
     }
 
-    const categoryData = conversionData[cat as keyof typeof conversionData];
-    const fromData = (categoryData.units as any)[from];
-    const toData = (categoryData.units as any)[to];
+    const fromData = getUnitData(cat, from);
+    const toData = getUnitData(cat, to);
 
     // Convert to base unit first, then to target unit
     const baseValue = value * fromData.toBase;
@@ -115,9 +128,8 @@ export const UnitConverter = () => {
   };
 
   const copyResult = async () => {
-    const categoryData = conversionData[category as keyof typeof conversionData];
-    const fromSymbol = (categoryData.units as any)[fromUnit].symbol;
-    const toSymbol = (categoryData.units as any)[toUnit].symbol;
+    const fromSymbol = getUnitData(category, fromUnit).symbol;
+    const toSymbol = getUnitData(category, toUnit).symbol;
     
     const resultText = `${inputValue} ${fromSymbol} = ${result.toFixed(6)} ${toSymbol}`;
     
@@ -127,7 +139,7 @@ export const UnitConverter = () => {
         title: "Copied!",
         description: "Conversion result copied to clipboard",
       });
-    } catch (err) {
+    } catch {
       toast({
         title: "Copy failed",
         description: "Could not copy to clipboard",
@@ -139,15 +151,15 @@ export const UnitConverter = () => {
   // Set default units when category changes
   const handleCategoryChange = (newCategory: string) => {
     setCategory(newCategory);
-    const categoryData = conversionData[newCategory as keyof typeof conversionData];
+    const categoryData = getCategoryData(newCategory);
     const unitKeys = Object.keys(categoryData.units);
     setFromUnit(unitKeys[0]);
     setToUnit(unitKeys[1] || unitKeys[0]);
   };
 
-  const currentCategory = conversionData[category as keyof typeof conversionData];
-  const fromData = (currentCategory.units as any)[fromUnit];
-  const toData = (currentCategory.units as any)[toUnit];
+  const currentCategory = getCategoryData(category);
+  const fromData = getUnitData(category, fromUnit);
+  const toData = getUnitData(category, toUnit);
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
@@ -191,7 +203,7 @@ export const UnitConverter = () => {
                   <SelectContent>
                     {Object.entries(currentCategory.units).map(([unitKey, unitData]) => (
                       <SelectItem key={unitKey} value={unitKey}>
-                        {(unitData as any).name} ({(unitData as any).symbol})
+                        {unitData.name} ({unitData.symbol})
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -207,7 +219,7 @@ export const UnitConverter = () => {
                   <SelectContent>
                     {Object.entries(currentCategory.units).map(([unitKey, unitData]) => (
                       <SelectItem key={unitKey} value={unitKey}>
-                        {(unitData as any).name} ({(unitData as any).symbol})
+                        {unitData.name} ({unitData.symbol})
                       </SelectItem>
                     ))}
                   </SelectContent>
