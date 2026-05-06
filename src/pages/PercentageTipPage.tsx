@@ -14,7 +14,7 @@ export default function PercentageTipPage() {
   return (
     <main className="container mx-auto py-10 px-4 max-w-4xl">
       <Helmet>
-        <title>Percentage Calculator & Tip Calculator Online (2025)</title>
+        <title>Percentage Calculator & Tip Calculator Online (2026)</title>
         <meta
           name="description"
           content="Instantly calculate percentages, discounts, and tips with our free Percentage & Tip Calculator. Fast, accurate, and easy to use for splitting bills."
@@ -33,6 +33,21 @@ export default function PercentageTipPage() {
         <Card className="shadow-large p-6">
             <PercentageTipCalculator />
         </Card>
+
+        <section className="rounded-xl border border-border/60 p-5 bg-background-secondary/30">
+          <h2 className="text-2xl font-semibold">When to use this percentage and tip tool</h2>
+          <p className="mt-2 text-muted-foreground">
+            This page combines common percentage math with practical tip and bill
+            splitting workflows. Use it to calculate discounts, tax increases,
+            restaurant tips, shared totals, markup, markdown, and percentage
+            changes without switching between separate tools.
+          </p>
+          <p className="mt-2 text-muted-foreground">
+            The examples below explain the formulas so the result is transparent
+            for students, shoppers, freelancers, and anyone checking everyday
+            money calculations.
+          </p>
+        </section>
 
         <article className="prose dark:prose-invert max-w-none space-y-6">
             <h2 className="text-2xl font-semibold">Mastering Percentages and Tipping Etiquette</h2>

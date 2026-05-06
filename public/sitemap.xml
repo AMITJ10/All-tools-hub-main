@@ -2,74 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://calculatorapps.net/</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/basic</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/percentage-tip</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/currency-converter</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/loan-emi-calculator</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/bmi-calculator</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/unit-converter</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/sip-calculator</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/privacy</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.50</priority>
   </url>
    <url>
     <loc>https://calculatorapps.net/terms</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.50</priority>
   </url>
    <url>
     <loc>https://calculatorapps.net/contact</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>https://calculatorapps.net/about</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://calculatorapps.net/editorial-policy</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://calculatorapps.net/guides/loan-emi</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://calculatorapps.net/guides/bmi</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://calculatorapps.net/guides/currency-exchange</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
 </urlset>
