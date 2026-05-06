@@ -54,6 +54,21 @@ export default function CurrencyConverterPage() {
           </Link>
         </section>
 
+        <section className="rounded-xl border border-border/60 p-5 bg-background-secondary/30">
+          <h2 className="text-2xl font-semibold">What makes this currency converter useful</h2>
+          <p className="mt-2 text-muted-foreground">
+            This converter is designed for quick travel planning, online shopping,
+            freelance invoices, and international transfers. It helps you compare
+            the market value of one currency against another before bank spreads,
+            card fees, or transfer-provider markups are applied.
+          </p>
+          <p className="mt-2 text-muted-foreground">
+            Always compare the displayed benchmark with the final rate offered by
+            your bank, card, or money-transfer provider before confirming a
+            payment.
+          </p>
+        </section>
+
         <article className="prose dark:prose-invert max-w-none space-y-6">
           <h2 className="text-2xl font-semibold">How Our Currency Converter Works</h2>
           <p>

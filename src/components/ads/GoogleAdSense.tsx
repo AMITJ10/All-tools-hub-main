@@ -12,7 +12,7 @@ interface GoogleAdSenseProps {
 // Declare Google AdSense
 declare global {
   interface Window {
-    adsbygoogle: any[];
+    adsbygoogle: unknown[];
   }
 }
 

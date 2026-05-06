@@ -53,6 +53,21 @@ export default function LoanEmiPage() {
           </Link>
         </section>
 
+        <section className="rounded-xl border border-border/60 p-5 bg-background-secondary/30">
+          <h2 className="text-2xl font-semibold">Use EMI results before choosing a loan</h2>
+          <p className="mt-2 text-muted-foreground">
+            The EMI result shows the fixed monthly payment required for the loan
+            amount, annual interest rate, and repayment tenure you enter. Use it
+            to compare home, car, personal, or education loan offers before
+            committing to a lender.
+          </p>
+          <p className="mt-2 text-muted-foreground">
+            Try multiple scenarios to see how a larger down payment, lower rate,
+            shorter tenure, or partial prepayment can affect your monthly budget
+            and total interest cost.
+          </p>
+        </section>
+
         <article className="prose dark:prose-invert max-w-none space-y-6">
           <h2 className="text-2xl font-semibold">
             Understanding Your Loan&apos;s Equated Monthly Installment (EMI)

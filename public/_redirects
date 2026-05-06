@@ -1,5 +1,22 @@
-https://www.calculatorapps.net/* https://calculatorapps.net/:splat 301!
-http://calculatorapps.net/* https://calculatorapps.net/:splat 301!
-http://www.calculatorapps.net/* https://calculatorapps.net/:splat 301!
+# Cloudflare Pages / Netlify edge redirects.
+# Keep canonical/legacy redirects above the SPA fallback. Host/protocol redirects
+# must be configured in Cloudflare dashboard Redirect Rules or Vercel config.
+/emi /loan-emi-calculator 301
+/sip /sip-calculator 301
+/currency /currency-converter 301
+/loan-emi /loan-emi-calculator 301
+/bmi /bmi-calculator 301
+/tip-calculator /percentage-tip 301
+/unit /unit-converter 301
+/gst /percentage-tip 301
+/calculator / 301
+/home / 301
+/loan-calculator /loan-emi-calculator 301
+/tip /percentage-tip 301
+/percentage-calculator /percentage-tip 301
+/bmi-calculator-online /bmi-calculator 301
+/currency-converter-online /currency-converter 301
+/unit-converter-online /unit-converter 301
+/sip-calculator-online /sip-calculator 301
 
 /* /index.html 200

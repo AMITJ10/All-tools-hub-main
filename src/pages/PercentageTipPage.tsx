@@ -34,6 +34,21 @@ export default function PercentageTipPage() {
             <PercentageTipCalculator />
         </Card>
 
+        <section className="rounded-xl border border-border/60 p-5 bg-background-secondary/30">
+          <h2 className="text-2xl font-semibold">When to use this percentage and tip tool</h2>
+          <p className="mt-2 text-muted-foreground">
+            This page combines common percentage math with practical tip and bill
+            splitting workflows. Use it to calculate discounts, tax increases,
+            restaurant tips, shared totals, markup, markdown, and percentage
+            changes without switching between separate tools.
+          </p>
+          <p className="mt-2 text-muted-foreground">
+            The examples below explain the formulas so the result is transparent
+            for students, shoppers, freelancers, and anyone checking everyday
+            money calculations.
+          </p>
+        </section>
+
         <article className="prose dark:prose-invert max-w-none space-y-6">
             <h2 className="text-2xl font-semibold">Mastering Percentages and Tipping Etiquette</h2>
             <p>
