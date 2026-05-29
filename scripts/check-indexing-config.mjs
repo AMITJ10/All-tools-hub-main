@@ -67,9 +67,18 @@ for (const file of checkedFiles) {
 
 const sitemap = read("public/sitemap.xml");
 const locs = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
+const urlBlocks = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => match[1]);
 const duplicates = locs.filter((url, index) => locs.indexOf(url) !== index);
 if (duplicates.length > 0) {
   fail(`public/sitemap.xml contains duplicate URLs: ${[...new Set(duplicates)].join(", ")}`);
+}
+
+for (const block of urlBlocks) {
+  const loc = block.match(/<loc>(.*?)<\/loc>/)?.[1] || "unknown URL";
+  const lastmodCount = [...block.matchAll(/<lastmod>/g)].length;
+  if (lastmodCount !== 1) {
+    fail(`public/sitemap.xml must include exactly one <lastmod> for ${loc}.`);
+  }
 }
 
 for (const url of locs) {
@@ -87,6 +96,21 @@ for (const url of requiredSitemapUrls) {
 const middleware = read("functions/_middleware.js");
 if (!middleware.includes("calculatorapps.net") || !middleware.includes("Response.redirect")) {
   fail("functions/_middleware.js must enforce the canonical HTTPS host with a redirect.");
+}
+
+for (const url of requiredSitemapUrls) {
+  const pathname = new URL(url).pathname;
+  if (!middleware.includes(`"${pathname}"`)) {
+    fail(`functions/_middleware.js is missing initial HTML metadata for ${pathname}.`);
+  }
+}
+
+const robots = read("public/robots.txt");
+if (!robots.includes("Sitemap: https://calculatorapps.net/sitemap.xml")) {
+  fail("public/robots.txt must point to the canonical sitemap.");
+}
+if (/^Host:/m.test(robots)) {
+  fail("public/robots.txt should not include a Host directive.");
 }
 
 const redirects = read("public/_redirects")
