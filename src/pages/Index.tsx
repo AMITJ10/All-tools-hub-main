@@ -28,13 +28,6 @@ import { BMICalculator } from "@/components/calculators/BMICalculator";
 import { UnitConverter } from "@/components/calculators/UnitConverter";
 import { SIPCalculator } from "@/components/calculators/SIPCalculator";
 import { Navigation } from "@/components/Navigation";
-import { AdBanner, AdRectangle } from "@/components/ads/GoogleAdSense";
-import {
-  LoanAffiliateCards,
-  CurrencyAffiliateCards,
-  HealthAffiliateCards,
-} from "@/components/ads/AffiliateCards";
-import { PremiumUpgrade, EmailCapture } from "@/components/ads/PremiumFeatures";
 import heroImage from "@/assets/hero-calculator.jpg";
 import oneCalcLogo from "@/assets/onecalc-logo.png";
 import { Helmet } from "react-helmet-async";
@@ -51,6 +44,14 @@ const Index = () => {
       icon: Calculator,
       component: BasicCalculator,
       color: "primary",
+      route: "/basic",
+      whyUse:
+        "Best for quick arithmetic, receipt checks, homework verification, and everyday totals where you want a clean calculator without distractions.",
+      notes: [
+        "Supports common operations in a simple, readable layout.",
+        "Useful for checking one-off numbers before moving them into a budget, spreadsheet, or report.",
+        "Works without sign-in and does not require personal data.",
+      ],
     },
     {
       id: "percentage-tip",
@@ -59,6 +60,14 @@ const Index = () => {
       icon: Percent,
       component: PercentageTipCalculator,
       color: "accent-conversion",
+      route: "/percentage-tip",
+      whyUse:
+        "Helps with discounts, GST/VAT-style percentage changes, restaurant tips, and shared bills where mental math can cause small mistakes.",
+      notes: [
+        "Compare percentage increase and decrease scenarios quickly.",
+        "Split totals across people while keeping tip and bill amounts clear.",
+        "Good for shopping, invoices, and day-to-day budgeting.",
+      ],
     },
     {
       id: "currency",
@@ -67,6 +76,14 @@ const Index = () => {
       icon: DollarSign,
       component: CurrencyConverter,
       color: "accent-currency",
+      route: "/currency-converter",
+      whyUse:
+        "Designed for travel planning, online shopping, freelance invoices, and international transfers where the mid-market rate gives a useful benchmark.",
+      notes: [
+        "Uses current exchange-rate data when available.",
+        "Shows conversions before bank spreads, card charges, or transfer-provider markups.",
+        "Includes a dedicated exchange-rate guide for fee and spread context.",
+      ],
     },
     {
       id: "loan-emi",
@@ -75,6 +92,14 @@ const Index = () => {
       icon: Hash,
       component: LoanEMICalculator,
       color: "accent-loan",
+      route: "/loan-emi-calculator",
+      whyUse:
+        "Useful before comparing home, car, education, or personal loan offers because it separates monthly EMI from total interest cost.",
+      notes: [
+        "Estimate EMI from principal, annual interest rate, and tenure.",
+        "Compare how tenure and interest-rate changes affect repayment.",
+        "Includes guide content explaining the EMI formula and amortization.",
+      ],
     },
     {
       id: "health",
@@ -83,6 +108,14 @@ const Index = () => {
       icon: Heart,
       component: BMICalculator,
       color: "accent-health",
+      route: "/bmi-calculator",
+      whyUse:
+        "Gives a quick body-mass-index estimate and supporting health metrics while clearly noting that BMI is only a screening measure.",
+      notes: [
+        "Explains standard adult BMI categories and their limits.",
+        "Helps users understand why age, activity, and body composition still matter.",
+        "Includes educational guidance rather than medical diagnosis.",
+      ],
     },
     {
       id: "units",
@@ -91,6 +124,14 @@ const Index = () => {
       icon: Scale,
       component: UnitConverter,
       color: "primary",
+      route: "/unit-converter",
+      whyUse:
+        "Helpful for students, travelers, cooks, and professionals who need quick conversions between metric, imperial, and everyday units.",
+      notes: [
+        "Covers common length, weight, temperature, area, volume, and speed conversions.",
+        "Keeps unit inputs close together for fast comparison.",
+        "Works well on mobile when you need a quick answer away from your desk.",
+      ],
     },
     {
       id: "sip",
@@ -99,6 +140,14 @@ const Index = () => {
       icon: TrendingUp,
       component: SIPCalculator,
       color: "accent-health",
+      route: "/sip-calculator",
+      whyUse:
+        "Helps estimate long-term systematic investment growth by showing the relationship between monthly deposits, time, and expected return.",
+      notes: [
+        "Useful for comparing different monthly SIP amounts and investment periods.",
+        "Shows compounding as an estimate, not a guaranteed return.",
+        "Pairs well with personal budgeting before making investment decisions.",
+      ],
     },
   ] as const;
 
@@ -302,10 +351,6 @@ const Index = () => {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-7xl">
-        <AdBanner className="mb-6" />
-      </div>
-
       {/* MAIN CALCULATORS */}
       <main
         className="container mx-auto px-4 py-8 max-w-7xl"
@@ -367,22 +412,34 @@ const Index = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="grid lg:grid-cols-3 gap-6">
-                      <div className="lg:col-span-2">
+                    <div className="grid lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)] gap-6">
+                      <div>
                         <CalculatorComponent />
                       </div>
-                      <div className="space-y-4">
-                        {calc.id === "loan-emi" && <LoanAffiliateCards />}
-                        {calc.id === "currency" && <CurrencyAffiliateCards />}
-                        {calc.id === "health" && <HealthAffiliateCards />}
-                        {(calc.id === "basic" || calc.id === "loan-emi") && (
-                          <PremiumUpgrade className="hidden lg:block" />
-                        )}
-                        {calc.id === "percentage-tip" && (
-                          <EmailCapture className="hidden lg:block" />
-                        )}
-                        <AdRectangle className="hidden lg:block" />
-                      </div>
+                      <aside className="rounded-lg border border-border/70 bg-background-secondary/30 p-5 space-y-4">
+                        <div>
+                          <h3 className="text-lg font-semibold">
+                            When to use this tool
+                          </h3>
+                          <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                            {calc.whyUse}
+                          </p>
+                        </div>
+                        <ul className="space-y-3 text-sm text-muted-foreground">
+                          {calc.notes.map((note) => (
+                            <li key={note} className="flex gap-2 leading-6">
+                              <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                              <span>{note}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <Link
+                          to={calc.route}
+                          className="inline-flex items-center justify-center rounded-md border border-primary/40 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
+                        >
+                          Open dedicated page
+                        </Link>
+                      </aside>
                     </div>
                   </CardContent>
                 </Card>
@@ -405,12 +462,6 @@ const Index = () => {
             </Button>
           </div>
         )}
-
-        <div className="lg:hidden space-y-6 mt-12">
-          <PremiumUpgrade />
-          <EmailCapture />
-          <AdRectangle />
-        </div>
 
         {/* SEO ARTICLE SECTION */}
         <section className="mt-16">
